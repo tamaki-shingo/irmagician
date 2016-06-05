@@ -7,5 +7,4 @@ Raspberry Piの場合、インストール後に以下のコマンドを実行�
 
 ```
 npm rebuild serialport --build-from-source
-
 ```
