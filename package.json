@@ -1,0 +1,26 @@
+{
+  "name": "irmagician",
+  "version": "0.0.1",
+  "description": "CLI Tool for irMagician",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "irmagician"
+  ],
+  "author": "tamaki.shingo",
+  "license": "ISC",
+  "dependencies": {
+    "co": "^4.6.0",
+    "colors": "^1.1.2",
+    "meow": "^3.7.0",
+    "serialport": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^2.11.0"
+  },
+  "bin": {
+    "irMagician": "bin/cli.js"
+  }
+}
