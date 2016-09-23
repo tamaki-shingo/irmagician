@@ -29,7 +29,11 @@ case "capture":
     irMagician.capture()
     break
 case "play":
-    irMagician.play()
+    if (cli.input[1]) {
+        irMagician.play(cli.input[1])
+    } else {
+        irMagician.play()
+    }
     break
 case "dump":
     if (cli.input[1]) {
