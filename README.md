@@ -8,3 +8,6 @@ Raspberry Piの場合、インストール後に以下のコマンドを実行�
 ```
 npm rebuild serialport --build-from-source
 ```
+
+# Installation & usage
+http://qiita.com/tamaki/items/f4127249ec211f7d70cd
