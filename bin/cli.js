@@ -10,6 +10,7 @@ Command
     play       Send a IR data
     dump       Dump written data
     write      Write a IR data from json
+    temp       Get a Temperature data
     info       Show irMagician Infomation
     showPorts  Show device ports
 
@@ -28,7 +29,11 @@ case "capture":
     irMagician.capture()
     break
 case "play":
-    irMagician.play()
+    if (cli.input[1]) {
+        irMagician.play(cli.input[1])
+    } else {
+        irMagician.play()
+    }
     break
 case "dump":
     if (cli.input[1]) {
@@ -43,6 +48,9 @@ case "write":
     } else {
         cli.showHelp()
     }
+    break
+case "temp":
+    irMagician.temp()
     break
 case "info":
     irMagician.info(cli.flags["p"])
