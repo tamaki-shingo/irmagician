@@ -22,41 +22,41 @@ Examples
     irMagician dump data.json
     irMagician write data.json
     
-`, {})
+`, {alias: {p: 'port'}})
 
 switch (cli.input[0]) {
 case "capture":
-    irMagician.capture()
+    irMagician.capture(cli.flags["p"])
     break
 case "play":
     if (cli.input[1]) {
-        irMagician.play(cli.input[1])
+        irMagician.play(cli.input[1], cli.flags["p"])
     } else {
-        irMagician.play()
+        irMagician.play(undefined, cli.flags["p"])
     }
     break
 case "dump":
     if (cli.input[1]) {
         irMagician.dump(cli.input[1])
     } else {
-        irMagician.dump()
+        irMagician.dump(undefined, cli.flags["p"])
     }
     break
 case "write":
     if (cli.input[1]) {
-        irMagician.write(cli.input[1])
+        irMagician.write(cli.input[1], cli.flags["p"])
     } else {
         cli.showHelp()
     }
     break
 case "temp":
-    irMagician.temp()
+    irMagician.temp(cli.flags["p"])
     break
 case "info":
     irMagician.info(cli.flags["p"])
     break
 case "showPorts":
-    require("./node_modules/serialport/bin/serialport-list.js")
+    require("../node_modules/serialport/bin/serialport-list.js")
 
     break
 default:
